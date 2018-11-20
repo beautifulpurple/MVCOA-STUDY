@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCOA_exerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cadrid" Type="nvarchar" MaxLength="255" />
+    <Property Name="Je" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dzb" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Sys_Area">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_SimpleSpelling" Type="varchar" MaxLength="50" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_DbBackup">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_BackupType" Type="varchar" MaxLength="50" />
+    <Property Name="F_DbName" Type="varchar" MaxLength="50" />
+    <Property Name="F_FileName" Type="varchar" MaxLength="50" />
+    <Property Name="F_FileSize" Type="varchar" MaxLength="50" />
+    <Property Name="F_FilePath" Type="varchar" MaxLength="500" />
+    <Property Name="F_BackupTime" Type="datetime" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Sys_FilterIP">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_Type" Type="bit" />
+    <Property Name="F_StartIP" Type="varchar" MaxLength="50" />
+    <Property Name="F_EndIP" Type="varchar" MaxLength="50" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Sys_Items">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_IsTree" Type="bit" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_ItemsDetail">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ItemId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ItemCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="F_SimpleSpelling" Type="varchar" MaxLength="500" />
+    <Property Name="F_IsDefault" Type="bit" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_Date" Type="datetime" />
+    <Property Name="F_Account" Type="varchar" MaxLength="50" />
+    <Property Name="F_NickName" Type="varchar" MaxLength="50" />
+    <Property Name="F_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_IPAddress" Type="varchar" MaxLength="50" />
+    <Property Name="F_IPAddressName" Type="varchar" MaxLength="50" />
+    <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ModuleName" Type="varchar" MaxLength="50" />
+    <Property Name="F_Result" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Module">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_Icon" Type="varchar" MaxLength="50" />
+    <Property Name="F_UrlAddress" Type="varchar" MaxLength="500" />
+    <Property Name="F_Target" Type="varchar" MaxLength="50" />
+    <Property Name="F_IsMenu" Type="bit" />
+    <Property Name="F_IsExpand" Type="bit" />
+    <Property Name="F_IsPublic" Type="bit" />
+    <Property Name="F_AllowEdit" Type="bit" />
+    <Property Name="F_AllowDelete" Type="bit" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleButton">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_Icon" Type="varchar" MaxLength="50" />
+    <Property Name="F_Location" Type="int" />
+    <Property Name="F_JsEvent" Type="varchar" MaxLength="50" />
+    <Property Name="F_UrlAddress" Type="varchar" MaxLength="500" />
+    <Property Name="F_Split" Type="bit" />
+    <Property Name="F_IsPublic" Type="bit" />
+    <Property Name="F_AllowEdit" Type="bit" />
+    <Property Name="F_AllowDelete" Type="bit" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleForm">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_FormJson" Type="varchar(max)" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleFormInstance">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_FormId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ObjectId" Type="varchar" MaxLength="50" />
+    <Property Name="F_InstanceJson" Type="varchar(max)" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Organize">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Layers" Type="int" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_ShortName" Type="varchar" MaxLength="50" />
+    <Property Name="F_CategoryId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ManagerId" Type="varchar" MaxLength="50" />
+    <Property Name="F_TelePhone" Type="varchar" MaxLength="20" />
+    <Property Name="F_MobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="F_WeChat" Type="varchar" MaxLength="50" />
+    <Property Name="F_Fax" Type="varchar" MaxLength="20" />
+    <Property Name="F_Email" Type="varchar" MaxLength="50" />
+    <Property Name="F_AreaId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Address" Type="varchar" MaxLength="500" />
+    <Property Name="F_AllowEdit" Type="bit" />
+    <Property Name="F_AllowDelete" Type="bit" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_OrganizeId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Category" Type="int" />
+    <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+    <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+    <Property Name="F_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_AllowEdit" Type="bit" />
+    <Property Name="F_AllowDelete" Type="bit" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Sys_RoleAuthorize">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ItemType" Type="int" />
+    <Property Name="F_ItemId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ObjectType" Type="int" />
+    <Property Name="F_ObjectId" Type="varchar" MaxLength="50" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_User">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_Account" Type="varchar" MaxLength="50" />
+    <Property Name="F_RealName" Type="varchar" MaxLength="50" />
+    <Property Name="F_NickName" Type="varchar" MaxLength="50" />
+    <Property Name="F_HeadIcon" Type="varchar" MaxLength="50" />
+    <Property Name="F_Gender" Type="bit" />
+    <Property Name="F_Birthday" Type="datetime" />
+    <Property Name="F_MobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="F_Email" Type="varchar" MaxLength="50" />
+    <Property Name="F_WeChat" Type="varchar" MaxLength="50" />
+    <Property Name="F_ManagerId" Type="varchar" MaxLength="50" />
+    <Property Name="F_SecurityLevel" Type="int" />
+    <Property Name="F_Signature" Type="varchar" MaxLength="500" />
+    <Property Name="F_OrganizeId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DepartmentId" Type="varchar" MaxLength="500" />
+    <Property Name="F_RoleId" Type="varchar" MaxLength="500" />
+    <Property Name="F_DutyId" Type="varchar" MaxLength="500" />
+    <Property Name="F_IsAdministrator" Type="bit" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+    <Property Name="F_OrgCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_User_Log">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="varchar" MaxLength="100" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoginTime" Type="datetime" />
+    <Property Name="Village" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_UserLogOn">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_UserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_UserPassword" Type="varchar" MaxLength="50" />
+    <Property Name="F_UserSecretkey" Type="varchar" MaxLength="50" />
+    <Property Name="F_AllowStartTime" Type="datetime" />
+    <Property Name="F_AllowEndTime" Type="datetime" />
+    <Property Name="F_LockStartDate" Type="datetime" />
+    <Property Name="F_LockEndDate" Type="datetime" />
+    <Property Name="F_FirstVisitTime" Type="datetime" />
+    <Property Name="F_PreviousVisitTime" Type="datetime" />
+    <Property Name="F_LastVisitTime" Type="datetime" />
+    <Property Name="F_ChangePasswordDate" Type="datetime" />
+    <Property Name="F_MultiUserLogin" Type="bit" />
+    <Property Name="F_LogOnCount" Type="int" />
+    <Property Name="F_UserOnLine" Type="bit" />
+    <Property Name="F_Question" Type="varchar" MaxLength="50" />
+    <Property Name="F_AnswerQuestion" Type="varchar" MaxLength="500" />
+    <Property Name="F_CheckIPAddress" Type="bit" />
+    <Property Name="F_Language" Type="varchar" MaxLength="50" />
+    <Property Name="F_Theme" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_WeChatUser">
+    <Key>
+      <PropertyRef Name="Sha1OpenId" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WeChatName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="1" />
+    <Property Name="Person_Id" Type="varchar" MaxLength="18" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyTel" Type="varchar" MaxLength="50" />
+    <Property Name="UserJob" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsAudit" Type="nvarchar" MaxLength="10" />
+    <Property Name="AuditResult" Type="nvarchar" MaxLength="50" />
+    <Property Name="AuditResultRemart" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sha1OpenId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OpenId" Type="varchar" MaxLength="50" />
+    <Property Name="Session_Key" Type="varchar" MaxLength="50" />
+    <Property Name="F_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_AuditTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_Aactivitie">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="AactivitieContent" Type="nvarchar(max)" />
+    <Property Name="Abstract" Type="nvarchar(max)" />
+    <Property Name="ReleaseTime" Type="date" />
+    <Property Name="EndTime" Type="date" />
+    <Property Name="Channel" Type="nvarchar" MaxLength="1" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="Active_Number" Type="int" />
+    <Property Name="Signup_Number" Type="int" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="Place" Type="varchar" MaxLength="100" />
+    <Property Name="Org_Code" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+    <Property Name="End" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_AactSignup">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CardID" Type="nvarchar" MaxLength="50" />
+    <Property Name="States" Type="nvarchar" MaxLength="50" />
+    <Property Name="AFid" Type="nvarchar" MaxLength="50" />
+    <Property Name="SignupTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Ballot">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Candidate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voters" Type="nvarchar" MaxLength="50" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Bill">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_State" Type="varchar" MaxLength="50" />
+    <Property Name="F_BillPrice" Type="varchar" MaxLength="50" />
+    <Property Name="F_DatePaymente" Type="date" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="nvarchar(max)" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Expenses">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Person_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Amounts" Type="varchar" MaxLength="50" />
+    <Property Name="Expense_States" Type="varchar" MaxLength="50" />
+    <Property Name="Expense_Explanation" Type="varchar" MaxLength="50" />
+    <Property Name="Out_Trade_No" Type="varchar" MaxLength="100" />
+    <Property Name="Transaction_No" Type="varchar(max)" />
+    <Property Name="Total_Amount" Type="varchar(max)" />
+    <Property Name="Transaction_Time" Type="varchar" MaxLength="50" />
+    <Property Name="Trade_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Images">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ImgUrl" Type="varchar(max)" />
+    <Property Name="F_SortCode" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MVCOA_exer.dbo.T_LeaseRecord”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_LeaseRecord">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ContractNO" Type="nvarchar(max)" />
+    <Property Name="F_ContractUnit" Type="nvarchar(max)" />
+    <Property Name="F_ActualUnit" Type="nvarchar(max)" />
+    <Property Name="F_Floor" Type="varchar" MaxLength="50" />
+    <Property Name="F_RoomNumber" Type="varchar" MaxLength="50" />
+    <Property Name="F_LeaseholdArea" Type="varchar" MaxLength="50" />
+    <Property Name="F_LeaseTermStartime" Type="datetime" />
+    <Property Name="F_LeaseTermEndTime" Type="datetime" />
+    <Property Name="F_TermPayment" Type="varchar" MaxLength="50" />
+    <Property Name="F_Invoice" Type="varchar" MaxLength="50" />
+    <Property Name="F_Taxation" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="nvarchar(max)" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_UnitPrice" Type="varchar" MaxLength="150" />
+    <Property Name="F_TotalPrice" Type="varchar" MaxLength="150" />
+    <Property Name="F_Static" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_MailBox">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Person_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LetterContent" Type="nvarchar(max)" />
+    <Property Name="ReplyContent" Type="nvarchar(max)" />
+    <Property Name="Pro_States" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_News">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewsContent" Type="nvarchar(max)" />
+    <Property Name="Abstract" Type="nvarchar(max)" />
+    <Property Name="ReleaseTime" Type="date" />
+    <Property Name="Channel" Type="nvarchar" MaxLength="10" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="Video" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Notice">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoticeContent" Type="nvarchar(max)" />
+    <Property Name="Abstract" Type="nvarchar(max)" />
+    <Property Name="ReleaseTime" Type="date" />
+    <Property Name="Channel" Type="nvarchar" MaxLength="1" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="Org_Code" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_OtherBill">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Year" Type="varchar" MaxLength="50" />
+    <Property Name="F_Month" Type="varchar" MaxLength="50" />
+    <Property Name="F_State" Type="varchar" MaxLength="50" />
+    <Property Name="F_BillPrice" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="nvarchar(max)" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastDose" Type="nvarchar(max)" />
+    <Property Name="F_ThisDose" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="T_PartyBuild">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="255" />
+    <Property Name="Person_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nation" Type="nvarchar" MaxLength="255" />
+    <Property Name="Birth" Type="nvarchar" MaxLength="255" />
+    <Property Name="NativePlace" Type="nvarchar" MaxLength="255" />
+    <Property Name="EDegree" Type="nvarchar" MaxLength="255" />
+    <Property Name="Aegree" Type="nvarchar" MaxLength="255" />
+    <Property Name="Etype" Type="nvarchar" MaxLength="255" />
+    <Property Name="AdmissionTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="GraduationTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="Partytime" Type="nvarchar" MaxLength="255" />
+    <Property Name="WorkTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="StartPostTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="Work_Unit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Home_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobile_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Apolicestation" Type="nvarchar" MaxLength="255" />
+    <Property Name="PartyPlace" Type="nvarchar" MaxLength="255" />
+    <Property Name="Or_Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="Zhen" Type="nchar" MaxLength="10" />
+    <Property Name="Qx" Type="nchar" MaxLength="10" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PartyOldPlace" Type="nvarchar" MaxLength="255" />
+    <Property Name="NewPartyTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="RollPartyTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="HomeVillage" Type="nvarchar" MaxLength="10" />
+    <Property Name="Village" Type="nvarchar" MaxLength="50" />
+    <Property Name="Month_Money" Type="nvarchar" MaxLength="50" />
+    <Property Name="PartyOrganization" Type="nvarchar" MaxLength="255" />
+    <Property Name="byzd1" Type="nvarchar" MaxLength="255" />
+    <Property Name="byzd2" Type="nvarchar" MaxLength="255" />
+    <Property Name="byzd3" Type="nvarchar" MaxLength="255" />
+    <Property Name="byzd4" Type="nvarchar" MaxLength="255" />
+    <Property Name="QiTaBuChong" Type="nvarchar" MaxLength="255" />
+    <Property Name="CurrentAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="TransferType" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransferDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransferToBranch" Type="nvarchar" MaxLength="255" />
+    <Property Name="TransferCause" Type="nvarchar(max)" />
+    <Property Name="OriginalPartyOrganization" Type="nvarchar" MaxLength="255" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="QiTaShenFen" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPartyMem" Type="nvarchar" MaxLength="10" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="255" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_Id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_PayResult">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="out_trade_no" Type="nvarchar" MaxLength="200" />
+    <Property Name="trade_no" Type="nvarchar" MaxLength="200" />
+    <Property Name="total_amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="timestamp" Type="nvarchar" MaxLength="50" />
+    <Property Name="trade_type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Tenant">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="F_DepartmentId" Type="varchar" MaxLength="50" />
+    <Property Name="F_SalesmanId" Type="varchar" MaxLength="50" />
+    <Property Name="F_ContractUnit" Type="nvarchar" MaxLength="1500" />
+    <Property Name="F_ActualUnit" Type="nvarchar" MaxLength="1500" />
+    <Property Name="F_LeaseContact" Type="nvarchar" MaxLength="1500" />
+    <Property Name="F_LeaseContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="F_CertificateShare" Type="varchar" MaxLength="50" />
+    <Property Name="F_RegisteredAddress" Type="nvarchar(max)" />
+    <Property Name="F_RegisteredCapital" Type="nvarchar(max)" />
+    <Property Name="F_EstablishDate" Type="datetime" />
+    <Property Name="F_ScopeBusiness" Type="nvarchar(max)" />
+    <Property Name="F_IncreasingRent" Type="nvarchar(max)" />
+    <Property Name="F_EnterpriseType" Type="varchar" MaxLength="50" />
+    <Property Name="F_ElectricityFees" Type="varchar" MaxLength="50" />
+    <Property Name="F_WaterFees" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="bit" />
+    <Property Name="F_Description" Type="nvarchar(max)" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_UnitPrice" Type="varchar" MaxLength="500" />
+    <Property Name="F_TotalPrice" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="T_Topic">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CardId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="50" />
+    <Property Name="States" Type="int" />
+    <Property Name="CreatorTime" Type="datetime" />
+    <Property Name="BackSum" Type="int" />
+  </EntityType>
+  <EntityType Name="T_TopicBack">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CardId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_Name" Type="varchar" MaxLength="50" />
+    <Property Name="TopicID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="50" />
+    <Property Name="States" Type="int" />
+    <Property Name="CreatorTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_Ver">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AppName" Type="varchar" MaxLength="50" />
+    <Property Name="ApkName" Type="varchar" MaxLength="50" />
+    <Property Name="VerName" Type="varchar" MaxLength="50" />
+    <Property Name="VerCode" Type="int" />
+  </EntityType>
+  <EntityType Name="T_Vote">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="VoteContent" Type="nvarchar(max)" />
+    <Property Name="Abstract" Type="nvarchar(max)" />
+    <Property Name="ReleaseTime" Type="date" />
+    <Property Name="Channel" Type="nvarchar" MaxLength="1" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="VoteSum" Type="int" />
+    <Property Name="Vstatis" Type="int" />
+    <Property Name="F_DeleteMark" Type="bit" />
+    <Property Name="F_EnabledMark" Type="varchar" MaxLength="500" />
+    <Property Name="F_CreatorTime" Type="datetime" />
+    <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_LastModifyTime" Type="datetime" />
+    <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+    <Property Name="F_DeleteTime" Type="datetime" />
+    <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MVCOA_exerModelStoreContainer">
+    <EntitySet Name="Sheet" EntityType="Self.Sheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_DbBackup" EntityType="Self.Sys_DbBackup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_FilterIP" EntityType="Self.Sys_FilterIP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Items" EntityType="Self.Sys_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_ItemsDetail" EntityType="Self.Sys_ItemsDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Log" EntityType="Self.Sys_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Module" EntityType="Self.Sys_Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_ModuleButton" EntityType="Self.Sys_ModuleButton" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_ModuleForm" EntityType="Self.Sys_ModuleForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_ModuleFormInstance" EntityType="Self.Sys_ModuleFormInstance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Organize" EntityType="Self.Sys_Organize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Role" EntityType="Self.Sys_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_RoleAuthorize" EntityType="Self.Sys_RoleAuthorize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_User" EntityType="Self.Sys_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_User_Log" EntityType="Self.Sys_User_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_UserLogOn" EntityType="Self.Sys_UserLogOn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_WeChatUser" EntityType="Self.Sys_WeChatUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Aactivitie" EntityType="Self.T_Aactivitie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_AactSignup" EntityType="Self.T_AactSignup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Ballot" EntityType="Self.T_Ballot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Bill" EntityType="Self.T_Bill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Expenses" EntityType="Self.T_Expenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Images" EntityType="Self.T_Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MailBox" EntityType="Self.T_MailBox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_News" EntityType="Self.T_News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Notice" EntityType="Self.T_Notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_OtherBill" EntityType="Self.T_OtherBill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PartyBuild" EntityType="Self.T_PartyBuild" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PayResult" EntityType="Self.T_PayResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Tenant" EntityType="Self.T_Tenant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Topic" EntityType="Self.T_Topic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_TopicBack" EntityType="Self.T_TopicBack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Ver" EntityType="Self.T_Ver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Vote" EntityType="Self.T_Vote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_LeaseRecord" EntityType="Self.T_LeaseRecord" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_LeaseRecord].[F_Id] AS [F_Id], 
+    [T_LeaseRecord].[F_ParentId] AS [F_ParentId], 
+    [T_LeaseRecord].[F_ContractNO] AS [F_ContractNO], 
+    [T_LeaseRecord].[F_ContractUnit] AS [F_ContractUnit], 
+    [T_LeaseRecord].[F_ActualUnit] AS [F_ActualUnit], 
+    [T_LeaseRecord].[F_Floor] AS [F_Floor], 
+    [T_LeaseRecord].[F_RoomNumber] AS [F_RoomNumber], 
+    [T_LeaseRecord].[F_LeaseholdArea] AS [F_LeaseholdArea], 
+    [T_LeaseRecord].[F_LeaseTermStartime] AS [F_LeaseTermStartime], 
+    [T_LeaseRecord].[F_LeaseTermEndTime] AS [F_LeaseTermEndTime], 
+    [T_LeaseRecord].[F_TermPayment] AS [F_TermPayment], 
+    [T_LeaseRecord].[F_Invoice] AS [F_Invoice], 
+    [T_LeaseRecord].[F_Taxation] AS [F_Taxation], 
+    [T_LeaseRecord].[F_LastModifyTime] AS [F_LastModifyTime], 
+    [T_LeaseRecord].[F_LastModifyUserId] AS [F_LastModifyUserId], 
+    [T_LeaseRecord].[F_DeleteTime] AS [F_DeleteTime], 
+    [T_LeaseRecord].[F_DeleteUserId] AS [F_DeleteUserId], 
+    [T_LeaseRecord].[F_DeleteMark] AS [F_DeleteMark], 
+    [T_LeaseRecord].[F_EnabledMark] AS [F_EnabledMark], 
+    [T_LeaseRecord].[F_Description] AS [F_Description], 
+    [T_LeaseRecord].[F_CreatorTime] AS [F_CreatorTime], 
+    [T_LeaseRecord].[F_CreatorUserId] AS [F_CreatorUserId], 
+    [T_LeaseRecord].[F_UnitPrice] AS [F_UnitPrice], 
+    [T_LeaseRecord].[F_TotalPrice] AS [F_TotalPrice], 
+    [T_LeaseRecord].[F_Static] AS [F_Static]
+    FROM [dbo].[T_LeaseRecord] AS [T_LeaseRecord]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

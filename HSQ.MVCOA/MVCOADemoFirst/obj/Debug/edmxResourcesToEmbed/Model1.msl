@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCOA_exerModelStoreContainer" CdmEntityContainer="MVCOA_exerEntities">
+    <EntitySetMapping Name="Sheets">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sheet">
+        <MappingFragment StoreEntitySet="Sheet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cadrid" ColumnName="Cadrid" />
+          <ScalarProperty Name="Je" ColumnName="Je" />
+          <ScalarProperty Name="Dzb" ColumnName="Dzb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Area">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Area">
+        <MappingFragment StoreEntitySet="Sys_Area">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_SimpleSpelling" ColumnName="F_SimpleSpelling" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_DbBackup">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_DbBackup">
+        <MappingFragment StoreEntitySet="Sys_DbBackup">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_BackupType" ColumnName="F_BackupType" />
+          <ScalarProperty Name="F_DbName" ColumnName="F_DbName" />
+          <ScalarProperty Name="F_FileName" ColumnName="F_FileName" />
+          <ScalarProperty Name="F_FileSize" ColumnName="F_FileSize" />
+          <ScalarProperty Name="F_FilePath" ColumnName="F_FilePath" />
+          <ScalarProperty Name="F_BackupTime" ColumnName="F_BackupTime" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_FilterIP">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_FilterIP">
+        <MappingFragment StoreEntitySet="Sys_FilterIP">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_StartIP" ColumnName="F_StartIP" />
+          <ScalarProperty Name="F_EndIP" ColumnName="F_EndIP" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Items">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Items">
+        <MappingFragment StoreEntitySet="Sys_Items">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_IsTree" ColumnName="F_IsTree" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_ItemsDetail">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_ItemsDetail">
+        <MappingFragment StoreEntitySet="Sys_ItemsDetail">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ItemId" ColumnName="F_ItemId" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_ItemCode" ColumnName="F_ItemCode" />
+          <ScalarProperty Name="F_ItemName" ColumnName="F_ItemName" />
+          <ScalarProperty Name="F_SimpleSpelling" ColumnName="F_SimpleSpelling" />
+          <ScalarProperty Name="F_IsDefault" ColumnName="F_IsDefault" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Log">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Log">
+        <MappingFragment StoreEntitySet="Sys_Log">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_Date" ColumnName="F_Date" />
+          <ScalarProperty Name="F_Account" ColumnName="F_Account" />
+          <ScalarProperty Name="F_NickName" ColumnName="F_NickName" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_IPAddress" ColumnName="F_IPAddress" />
+          <ScalarProperty Name="F_IPAddressName" ColumnName="F_IPAddressName" />
+          <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+          <ScalarProperty Name="F_ModuleName" ColumnName="F_ModuleName" />
+          <ScalarProperty Name="F_Result" ColumnName="F_Result" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Module">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Module">
+        <MappingFragment StoreEntitySet="Sys_Module">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_Icon" ColumnName="F_Icon" />
+          <ScalarProperty Name="F_UrlAddress" ColumnName="F_UrlAddress" />
+          <ScalarProperty Name="F_Target" ColumnName="F_Target" />
+          <ScalarProperty Name="F_IsMenu" ColumnName="F_IsMenu" />
+          <ScalarProperty Name="F_IsExpand" ColumnName="F_IsExpand" />
+          <ScalarProperty Name="F_IsPublic" ColumnName="F_IsPublic" />
+          <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+          <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_ModuleButton">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_ModuleButton">
+        <MappingFragment StoreEntitySet="Sys_ModuleButton">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_Icon" ColumnName="F_Icon" />
+          <ScalarProperty Name="F_Location" ColumnName="F_Location" />
+          <ScalarProperty Name="F_JsEvent" ColumnName="F_JsEvent" />
+          <ScalarProperty Name="F_UrlAddress" ColumnName="F_UrlAddress" />
+          <ScalarProperty Name="F_Split" ColumnName="F_Split" />
+          <ScalarProperty Name="F_IsPublic" ColumnName="F_IsPublic" />
+          <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+          <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_ModuleForm">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_ModuleForm">
+        <MappingFragment StoreEntitySet="Sys_ModuleForm">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_FormJson" ColumnName="F_FormJson" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_ModuleFormInstance">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_ModuleFormInstance">
+        <MappingFragment StoreEntitySet="Sys_ModuleFormInstance">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_FormId" ColumnName="F_FormId" />
+          <ScalarProperty Name="F_ObjectId" ColumnName="F_ObjectId" />
+          <ScalarProperty Name="F_InstanceJson" ColumnName="F_InstanceJson" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Organize">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Organize">
+        <MappingFragment StoreEntitySet="Sys_Organize">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_ShortName" ColumnName="F_ShortName" />
+          <ScalarProperty Name="F_CategoryId" ColumnName="F_CategoryId" />
+          <ScalarProperty Name="F_ManagerId" ColumnName="F_ManagerId" />
+          <ScalarProperty Name="F_TelePhone" ColumnName="F_TelePhone" />
+          <ScalarProperty Name="F_MobilePhone" ColumnName="F_MobilePhone" />
+          <ScalarProperty Name="F_WeChat" ColumnName="F_WeChat" />
+          <ScalarProperty Name="F_Fax" ColumnName="F_Fax" />
+          <ScalarProperty Name="F_Email" ColumnName="F_Email" />
+          <ScalarProperty Name="F_AreaId" ColumnName="F_AreaId" />
+          <ScalarProperty Name="F_Address" ColumnName="F_Address" />
+          <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+          <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Role">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_Role">
+        <MappingFragment StoreEntitySet="Sys_Role">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_OrganizeId" ColumnName="F_OrganizeId" />
+          <ScalarProperty Name="F_Category" ColumnName="F_Category" />
+          <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+          <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+          <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_RoleAuthorize">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_RoleAuthorize">
+        <MappingFragment StoreEntitySet="Sys_RoleAuthorize">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ItemType" ColumnName="F_ItemType" />
+          <ScalarProperty Name="F_ItemId" ColumnName="F_ItemId" />
+          <ScalarProperty Name="F_ObjectType" ColumnName="F_ObjectType" />
+          <ScalarProperty Name="F_ObjectId" ColumnName="F_ObjectId" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_User">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_User">
+        <MappingFragment StoreEntitySet="Sys_User">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_Account" ColumnName="F_Account" />
+          <ScalarProperty Name="F_RealName" ColumnName="F_RealName" />
+          <ScalarProperty Name="F_NickName" ColumnName="F_NickName" />
+          <ScalarProperty Name="F_HeadIcon" ColumnName="F_HeadIcon" />
+          <ScalarProperty Name="F_Gender" ColumnName="F_Gender" />
+          <ScalarProperty Name="F_Birthday" ColumnName="F_Birthday" />
+          <ScalarProperty Name="F_MobilePhone" ColumnName="F_MobilePhone" />
+          <ScalarProperty Name="F_Email" ColumnName="F_Email" />
+          <ScalarProperty Name="F_WeChat" ColumnName="F_WeChat" />
+          <ScalarProperty Name="F_ManagerId" ColumnName="F_ManagerId" />
+          <ScalarProperty Name="F_SecurityLevel" ColumnName="F_SecurityLevel" />
+          <ScalarProperty Name="F_Signature" ColumnName="F_Signature" />
+          <ScalarProperty Name="F_OrganizeId" ColumnName="F_OrganizeId" />
+          <ScalarProperty Name="F_DepartmentId" ColumnName="F_DepartmentId" />
+          <ScalarProperty Name="F_RoleId" ColumnName="F_RoleId" />
+          <ScalarProperty Name="F_DutyId" ColumnName="F_DutyId" />
+          <ScalarProperty Name="F_IsAdministrator" ColumnName="F_IsAdministrator" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_OrgCode" ColumnName="F_OrgCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_User_Log">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_User_Log">
+        <MappingFragment StoreEntitySet="Sys_User_Log">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_UserLogOn">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_UserLogOn">
+        <MappingFragment StoreEntitySet="Sys_UserLogOn">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_UserId" ColumnName="F_UserId" />
+          <ScalarProperty Name="F_UserPassword" ColumnName="F_UserPassword" />
+          <ScalarProperty Name="F_UserSecretkey" ColumnName="F_UserSecretkey" />
+          <ScalarProperty Name="F_AllowStartTime" ColumnName="F_AllowStartTime" />
+          <ScalarProperty Name="F_AllowEndTime" ColumnName="F_AllowEndTime" />
+          <ScalarProperty Name="F_LockStartDate" ColumnName="F_LockStartDate" />
+          <ScalarProperty Name="F_LockEndDate" ColumnName="F_LockEndDate" />
+          <ScalarProperty Name="F_FirstVisitTime" ColumnName="F_FirstVisitTime" />
+          <ScalarProperty Name="F_PreviousVisitTime" ColumnName="F_PreviousVisitTime" />
+          <ScalarProperty Name="F_LastVisitTime" ColumnName="F_LastVisitTime" />
+          <ScalarProperty Name="F_ChangePasswordDate" ColumnName="F_ChangePasswordDate" />
+          <ScalarProperty Name="F_MultiUserLogin" ColumnName="F_MultiUserLogin" />
+          <ScalarProperty Name="F_LogOnCount" ColumnName="F_LogOnCount" />
+          <ScalarProperty Name="F_UserOnLine" ColumnName="F_UserOnLine" />
+          <ScalarProperty Name="F_Question" ColumnName="F_Question" />
+          <ScalarProperty Name="F_AnswerQuestion" ColumnName="F_AnswerQuestion" />
+          <ScalarProperty Name="F_CheckIPAddress" ColumnName="F_CheckIPAddress" />
+          <ScalarProperty Name="F_Language" ColumnName="F_Language" />
+          <ScalarProperty Name="F_Theme" ColumnName="F_Theme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_WeChatUser">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.Sys_WeChatUser">
+        <MappingFragment StoreEntitySet="Sys_WeChatUser">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="WeChatName" ColumnName="WeChatName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Person_Id" ColumnName="Person_Id" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserCompany" ColumnName="UserCompany" />
+          <ScalarProperty Name="CompanyTel" ColumnName="CompanyTel" />
+          <ScalarProperty Name="UserJob" ColumnName="UserJob" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IsAudit" ColumnName="IsAudit" />
+          <ScalarProperty Name="AuditResult" ColumnName="AuditResult" />
+          <ScalarProperty Name="AuditResultRemart" ColumnName="AuditResultRemart" />
+          <ScalarProperty Name="Sha1OpenId" ColumnName="Sha1OpenId" />
+          <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+          <ScalarProperty Name="Session_Key" ColumnName="Session_Key" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_AuditTime" ColumnName="F_AuditTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Aactivitie">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Aactivitie">
+        <MappingFragment StoreEntitySet="T_Aactivitie">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="AactivitieContent" ColumnName="AactivitieContent" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+          <ScalarProperty Name="ReleaseTime" ColumnName="ReleaseTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Active_Number" ColumnName="Active_Number" />
+          <ScalarProperty Name="Signup_Number" ColumnName="Signup_Number" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Org_Code" ColumnName="Org_Code" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="End" ColumnName="End" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AactSignup">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_AactSignup">
+        <MappingFragment StoreEntitySet="T_AactSignup">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="States" ColumnName="States" />
+          <ScalarProperty Name="AFid" ColumnName="AFid" />
+          <ScalarProperty Name="SignupTime" ColumnName="SignupTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Ballot">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Ballot">
+        <MappingFragment StoreEntitySet="T_Ballot">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Candidate" ColumnName="Candidate" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Bill">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Bill">
+        <MappingFragment StoreEntitySet="T_Bill">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_State" ColumnName="F_State" />
+          <ScalarProperty Name="F_BillPrice" ColumnName="F_BillPrice" />
+          <ScalarProperty Name="F_DatePaymente" ColumnName="F_DatePaymente" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Expenses">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Expenses">
+        <MappingFragment StoreEntitySet="T_Expenses">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Amounts" ColumnName="Amounts" />
+          <ScalarProperty Name="Expense_States" ColumnName="Expense_States" />
+          <ScalarProperty Name="Expense_Explanation" ColumnName="Expense_Explanation" />
+          <ScalarProperty Name="Out_Trade_No" ColumnName="Out_Trade_No" />
+          <ScalarProperty Name="Transaction_No" ColumnName="Transaction_No" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+          <ScalarProperty Name="Transaction_Time" ColumnName="Transaction_Time" />
+          <ScalarProperty Name="Trade_Type" ColumnName="Trade_Type" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Images">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Images">
+        <MappingFragment StoreEntitySet="T_Images">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_ImgUrl" ColumnName="F_ImgUrl" />
+          <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MailBox">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_MailBox">
+        <MappingFragment StoreEntitySet="T_MailBox">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="LetterContent" ColumnName="LetterContent" />
+          <ScalarProperty Name="ReplyContent" ColumnName="ReplyContent" />
+          <ScalarProperty Name="Pro_States" ColumnName="Pro_States" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_News">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_News">
+        <MappingFragment StoreEntitySet="T_News">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="NewsContent" ColumnName="NewsContent" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+          <ScalarProperty Name="ReleaseTime" ColumnName="ReleaseTime" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Notice">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Notice">
+        <MappingFragment StoreEntitySet="T_Notice">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="NoticeContent" ColumnName="NoticeContent" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+          <ScalarProperty Name="ReleaseTime" ColumnName="ReleaseTime" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Org_Code" ColumnName="Org_Code" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OtherBill">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_OtherBill">
+        <MappingFragment StoreEntitySet="T_OtherBill">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_Year" ColumnName="F_Year" />
+          <ScalarProperty Name="F_Month" ColumnName="F_Month" />
+          <ScalarProperty Name="F_State" ColumnName="F_State" />
+          <ScalarProperty Name="F_BillPrice" ColumnName="F_BillPrice" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_LastDose" ColumnName="F_LastDose" />
+          <ScalarProperty Name="F_ThisDose" ColumnName="F_ThisDose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PartyBuild">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_PartyBuild">
+        <MappingFragment StoreEntitySet="T_PartyBuild">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Nation" ColumnName="Nation" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="EDegree" ColumnName="EDegree" />
+          <ScalarProperty Name="Aegree" ColumnName="Aegree" />
+          <ScalarProperty Name="Etype" ColumnName="Etype" />
+          <ScalarProperty Name="AdmissionTime" ColumnName="AdmissionTime" />
+          <ScalarProperty Name="GraduationTime" ColumnName="GraduationTime" />
+          <ScalarProperty Name="Partytime" ColumnName="Partytime" />
+          <ScalarProperty Name="WorkTime" ColumnName="WorkTime" />
+          <ScalarProperty Name="StartPostTime" ColumnName="StartPostTime" />
+          <ScalarProperty Name="Work_Unit" ColumnName="Work_Unit" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Home_Phone" ColumnName="Home_Phone" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile_Phone" />
+          <ScalarProperty Name="Apolicestation" ColumnName="Apolicestation" />
+          <ScalarProperty Name="PartyPlace" ColumnName="PartyPlace" />
+          <ScalarProperty Name="Or_Unit" ColumnName="Or_Unit" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Zhen" ColumnName="Zhen" />
+          <ScalarProperty Name="Qx" ColumnName="Qx" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PartyOldPlace" ColumnName="PartyOldPlace" />
+          <ScalarProperty Name="NewPartyTime" ColumnName="NewPartyTime" />
+          <ScalarProperty Name="RollPartyTime" ColumnName="RollPartyTime" />
+          <ScalarProperty Name="HomeVillage" ColumnName="HomeVillage" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="Month_Money" ColumnName="Month_Money" />
+          <ScalarProperty Name="PartyOrganization" ColumnName="PartyOrganization" />
+          <ScalarProperty Name="byzd1" ColumnName="byzd1" />
+          <ScalarProperty Name="byzd2" ColumnName="byzd2" />
+          <ScalarProperty Name="byzd3" ColumnName="byzd3" />
+          <ScalarProperty Name="byzd4" ColumnName="byzd4" />
+          <ScalarProperty Name="QiTaBuChong" ColumnName="QiTaBuChong" />
+          <ScalarProperty Name="CurrentAddress" ColumnName="CurrentAddress" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="TransferToBranch" ColumnName="TransferToBranch" />
+          <ScalarProperty Name="TransferCause" ColumnName="TransferCause" />
+          <ScalarProperty Name="OriginalPartyOrganization" ColumnName="OriginalPartyOrganization" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="QiTaShenFen" ColumnName="QiTaShenFen" />
+          <ScalarProperty Name="IsPartyMem" ColumnName="IsPartyMem" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PayResult">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_PayResult">
+        <MappingFragment StoreEntitySet="T_PayResult">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="out_trade_no" ColumnName="out_trade_no" />
+          <ScalarProperty Name="trade_no" ColumnName="trade_no" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="trade_type" ColumnName="trade_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Tenant">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Tenant">
+        <MappingFragment StoreEntitySet="T_Tenant">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_DepartmentId" ColumnName="F_DepartmentId" />
+          <ScalarProperty Name="F_SalesmanId" ColumnName="F_SalesmanId" />
+          <ScalarProperty Name="F_ContractUnit" ColumnName="F_ContractUnit" />
+          <ScalarProperty Name="F_ActualUnit" ColumnName="F_ActualUnit" />
+          <ScalarProperty Name="F_LeaseContact" ColumnName="F_LeaseContact" />
+          <ScalarProperty Name="F_LeaseContactPhone" ColumnName="F_LeaseContactPhone" />
+          <ScalarProperty Name="F_CertificateShare" ColumnName="F_CertificateShare" />
+          <ScalarProperty Name="F_RegisteredAddress" ColumnName="F_RegisteredAddress" />
+          <ScalarProperty Name="F_RegisteredCapital" ColumnName="F_RegisteredCapital" />
+          <ScalarProperty Name="F_EstablishDate" ColumnName="F_EstablishDate" />
+          <ScalarProperty Name="F_ScopeBusiness" ColumnName="F_ScopeBusiness" />
+          <ScalarProperty Name="F_IncreasingRent" ColumnName="F_IncreasingRent" />
+          <ScalarProperty Name="F_EnterpriseType" ColumnName="F_EnterpriseType" />
+          <ScalarProperty Name="F_ElectricityFees" ColumnName="F_ElectricityFees" />
+          <ScalarProperty Name="F_WaterFees" ColumnName="F_WaterFees" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_UnitPrice" ColumnName="F_UnitPrice" />
+          <ScalarProperty Name="F_TotalPrice" ColumnName="F_TotalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Topic">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Topic">
+        <MappingFragment StoreEntitySet="T_Topic">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="CardId" ColumnName="CardId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Org_Name" ColumnName="Org_Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="States" ColumnName="States" />
+          <ScalarProperty Name="CreatorTime" ColumnName="CreatorTime" />
+          <ScalarProperty Name="BackSum" ColumnName="BackSum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_TopicBack">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_TopicBack">
+        <MappingFragment StoreEntitySet="T_TopicBack">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="CardId" ColumnName="CardId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Org_Name" ColumnName="Org_Name" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="States" ColumnName="States" />
+          <ScalarProperty Name="CreatorTime" ColumnName="CreatorTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Ver">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Ver">
+        <MappingFragment StoreEntitySet="T_Ver">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="ApkName" ColumnName="ApkName" />
+          <ScalarProperty Name="VerName" ColumnName="VerName" />
+          <ScalarProperty Name="VerCode" ColumnName="VerCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Vote">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_Vote">
+        <MappingFragment StoreEntitySet="T_Vote">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="VoteContent" ColumnName="VoteContent" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+          <ScalarProperty Name="ReleaseTime" ColumnName="ReleaseTime" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="VoteSum" ColumnName="VoteSum" />
+          <ScalarProperty Name="Vstatis" ColumnName="Vstatis" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_LeaseRecord">
+      <EntityTypeMapping TypeName="MVCOA_exerModel.T_LeaseRecord">
+        <MappingFragment StoreEntitySet="T_LeaseRecord">
+          <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+          <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+          <ScalarProperty Name="F_ContractNO" ColumnName="F_ContractNO" />
+          <ScalarProperty Name="F_ContractUnit" ColumnName="F_ContractUnit" />
+          <ScalarProperty Name="F_ActualUnit" ColumnName="F_ActualUnit" />
+          <ScalarProperty Name="F_Floor" ColumnName="F_Floor" />
+          <ScalarProperty Name="F_RoomNumber" ColumnName="F_RoomNumber" />
+          <ScalarProperty Name="F_LeaseholdArea" ColumnName="F_LeaseholdArea" />
+          <ScalarProperty Name="F_LeaseTermStartime" ColumnName="F_LeaseTermStartime" />
+          <ScalarProperty Name="F_LeaseTermEndTime" ColumnName="F_LeaseTermEndTime" />
+          <ScalarProperty Name="F_TermPayment" ColumnName="F_TermPayment" />
+          <ScalarProperty Name="F_Invoice" ColumnName="F_Invoice" />
+          <ScalarProperty Name="F_Taxation" ColumnName="F_Taxation" />
+          <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+          <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+          <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+          <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+          <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+          <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+          <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+          <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+          <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+          <ScalarProperty Name="F_UnitPrice" ColumnName="F_UnitPrice" />
+          <ScalarProperty Name="F_TotalPrice" ColumnName="F_TotalPrice" />
+          <ScalarProperty Name="F_Static" ColumnName="F_Static" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

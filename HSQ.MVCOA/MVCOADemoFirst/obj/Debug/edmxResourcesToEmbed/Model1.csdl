@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCOA_exerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Sheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cadrid" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Je" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dzb" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_Area">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SimpleSpelling" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_DbBackup">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_BackupType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DbName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FileSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_BackupTime" Type="DateTime" Precision="3" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_FilterIP">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_Type" Type="Boolean" />
+    <Property Name="F_StartIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_EndIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Items">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_IsTree" Type="Boolean" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_ItemsDetail">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SimpleSpelling" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_IsDefault" Type="Boolean" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_Date" Type="DateTime" Precision="3" />
+    <Property Name="F_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_IPAddressName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ModuleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Result" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Module">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UrlAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_IsMenu" Type="Boolean" />
+    <Property Name="F_IsExpand" Type="Boolean" />
+    <Property Name="F_IsPublic" Type="Boolean" />
+    <Property Name="F_AllowEdit" Type="Boolean" />
+    <Property Name="F_AllowDelete" Type="Boolean" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleButton">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Location" Type="Int32" />
+    <Property Name="F_JsEvent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UrlAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_Split" Type="Boolean" />
+    <Property Name="F_IsPublic" Type="Boolean" />
+    <Property Name="F_AllowEdit" Type="Boolean" />
+    <Property Name="F_AllowDelete" Type="Boolean" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleForm">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FormJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_ModuleFormInstance">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_FormId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ObjectId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_InstanceJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Organize">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Layers" Type="Int32" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_CategoryId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ManagerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_TelePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="F_MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="F_WeChat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="F_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_AreaId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_AllowEdit" Type="Boolean" />
+    <Property Name="F_AllowDelete" Type="Boolean" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_OrganizeId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Category" Type="Int32" />
+    <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_AllowEdit" Type="Boolean" />
+    <Property Name="F_AllowDelete" Type="Boolean" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_RoleAuthorize">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ItemType" Type="Int32" />
+    <Property Name="F_ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ObjectType" Type="Int32" />
+    <Property Name="F_ObjectId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_User">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_HeadIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Gender" Type="Boolean" />
+    <Property Name="F_Birthday" Type="DateTime" Precision="3" />
+    <Property Name="F_MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="F_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_WeChat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ManagerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SecurityLevel" Type="Int32" />
+    <Property Name="F_Signature" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_OrganizeId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DepartmentId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_RoleId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_DutyId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_IsAdministrator" Type="Boolean" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_OrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_User_Log">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoginTime" Type="DateTime" Precision="3" />
+    <Property Name="Village" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_UserLogOn">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UserSecretkey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_AllowStartTime" Type="DateTime" Precision="3" />
+    <Property Name="F_AllowEndTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LockStartDate" Type="DateTime" Precision="3" />
+    <Property Name="F_LockEndDate" Type="DateTime" Precision="3" />
+    <Property Name="F_FirstVisitTime" Type="DateTime" Precision="3" />
+    <Property Name="F_PreviousVisitTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastVisitTime" Type="DateTime" Precision="3" />
+    <Property Name="F_ChangePasswordDate" Type="DateTime" Precision="3" />
+    <Property Name="F_MultiUserLogin" Type="Boolean" />
+    <Property Name="F_LogOnCount" Type="Int32" />
+    <Property Name="F_UserOnLine" Type="Boolean" />
+    <Property Name="F_Question" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_AnswerQuestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CheckIPAddress" Type="Boolean" />
+    <Property Name="F_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Theme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_WeChatUser">
+    <Key>
+      <PropertyRef Name="Sha1OpenId" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeChatName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Person_Id" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserJob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsAudit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="AuditResult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AuditResultRemart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Sha1OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Session_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_AuditTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Aactivitie">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AactivitieContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Abstract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReleaseTime" Type="DateTime" Precision="0" />
+    <Property Name="EndTime" Type="DateTime" Precision="0" />
+    <Property Name="Channel" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active_Number" Type="Int32" />
+    <Property Name="Signup_Number" Type="Int32" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Place" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Org_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="End" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_AactSignup">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CardID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="States" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AFid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SignupTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Ballot">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Candidate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Voters" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Bill">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_BillPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DatePaymente" Type="DateTime" Precision="0" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Expenses">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Person_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Amounts" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expense_States" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expense_Explanation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Out_Trade_No" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Transaction_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Transaction_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trade_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Images">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ImgUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="F_SortCode" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_MailBox">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Person_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LetterContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_States" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_News">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NewsContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Abstract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReleaseTime" Type="DateTime" Precision="0" />
+    <Property Name="Channel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Notice">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoticeContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Abstract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReleaseTime" Type="DateTime" Precision="0" />
+    <Property Name="Channel" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Org_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_OtherBill">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Month" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_BillPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastDose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_ThisDose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_PartyBuild">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Person_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Birth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NativePlace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EDegree" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aegree" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Etype" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AdmissionTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GraduationTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Partytime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WorkTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StartPostTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Home_Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Apolicestation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PartyPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Or_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Zhen" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Qx" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartyOldPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewPartyTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RollPartyTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HomeVillage" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Village" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Month_Money" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartyOrganization" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="byzd1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="byzd2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="byzd3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="byzd4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="QiTaBuChong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TransferType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TransferDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TransferToBranch" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TransferCause" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OriginalPartyOrganization" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QiTaShenFen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPartyMem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_PayResult">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="out_trade_no" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="trade_no" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="total_amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="trade_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Tenant">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_DepartmentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_SalesmanId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ContractUnit" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="F_ActualUnit" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="F_LeaseContact" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="F_LeaseContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="F_CertificateShare" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_RegisteredAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_RegisteredCapital" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_EstablishDate" Type="DateTime" Precision="3" />
+    <Property Name="F_ScopeBusiness" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_IncreasingRent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_EnterpriseType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ElectricityFees" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_WaterFees" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UnitPrice" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_TotalPrice" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Topic">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CardId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Org_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="States" Type="Int32" />
+    <Property Name="CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="BackSum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_TopicBack">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CardId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Org_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TopicID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="States" Type="Int32" />
+    <Property Name="CreatorTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Ver">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AppName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApkName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VerCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_Vote">
+    <Key>
+      <PropertyRef Name="F_id" />
+    </Key>
+    <Property Name="F_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VoteContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Abstract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReleaseTime" Type="DateTime" Precision="0" />
+    <Property Name="Channel" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="VoteSum" Type="Int32" />
+    <Property Name="Vstatis" Type="Int32" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_LeaseRecord">
+    <Key>
+      <PropertyRef Name="F_Id" />
+    </Key>
+    <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_ContractNO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_ContractUnit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_ActualUnit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_RoomNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LeaseholdArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LeaseTermStartime" Type="DateTime" Precision="3" />
+    <Property Name="F_LeaseTermEndTime" Type="DateTime" Precision="3" />
+    <Property Name="F_TermPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Invoice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_Taxation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="F_DeleteMark" Type="Boolean" />
+    <Property Name="F_EnabledMark" Type="Boolean" />
+    <Property Name="F_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+    <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UnitPrice" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="F_TotalPrice" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="F_Static" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MVCOA_exerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sheets" EntityType="Self.Sheet" />
+    <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" />
+    <EntitySet Name="Sys_DbBackup" EntityType="Self.Sys_DbBackup" />
+    <EntitySet Name="Sys_FilterIP" EntityType="Self.Sys_FilterIP" />
+    <EntitySet Name="Sys_Items" EntityType="Self.Sys_Items" />
+    <EntitySet Name="Sys_ItemsDetail" EntityType="Self.Sys_ItemsDetail" />
+    <EntitySet Name="Sys_Log" EntityType="Self.Sys_Log" />
+    <EntitySet Name="Sys_Module" EntityType="Self.Sys_Module" />
+    <EntitySet Name="Sys_ModuleButton" EntityType="Self.Sys_ModuleButton" />
+    <EntitySet Name="Sys_ModuleForm" EntityType="Self.Sys_ModuleForm" />
+    <EntitySet Name="Sys_ModuleFormInstance" EntityType="Self.Sys_ModuleFormInstance" />
+    <EntitySet Name="Sys_Organize" EntityType="Self.Sys_Organize" />
+    <EntitySet Name="Sys_Role" EntityType="Self.Sys_Role" />
+    <EntitySet Name="Sys_RoleAuthorize" EntityType="Self.Sys_RoleAuthorize" />
+    <EntitySet Name="Sys_User" EntityType="Self.Sys_User" />
+    <EntitySet Name="Sys_User_Log" EntityType="Self.Sys_User_Log" />
+    <EntitySet Name="Sys_UserLogOn" EntityType="Self.Sys_UserLogOn" />
+    <EntitySet Name="Sys_WeChatUser" EntityType="Self.Sys_WeChatUser" />
+    <EntitySet Name="T_Aactivitie" EntityType="Self.T_Aactivitie" />
+    <EntitySet Name="T_AactSignup" EntityType="Self.T_AactSignup" />
+    <EntitySet Name="T_Ballot" EntityType="Self.T_Ballot" />
+    <EntitySet Name="T_Bill" EntityType="Self.T_Bill" />
+    <EntitySet Name="T_Expenses" EntityType="Self.T_Expenses" />
+    <EntitySet Name="T_Images" EntityType="Self.T_Images" />
+    <EntitySet Name="T_MailBox" EntityType="Self.T_MailBox" />
+    <EntitySet Name="T_News" EntityType="Self.T_News" />
+    <EntitySet Name="T_Notice" EntityType="Self.T_Notice" />
+    <EntitySet Name="T_OtherBill" EntityType="Self.T_OtherBill" />
+    <EntitySet Name="T_PartyBuild" EntityType="Self.T_PartyBuild" />
+    <EntitySet Name="T_PayResult" EntityType="Self.T_PayResult" />
+    <EntitySet Name="T_Tenant" EntityType="Self.T_Tenant" />
+    <EntitySet Name="T_Topic" EntityType="Self.T_Topic" />
+    <EntitySet Name="T_TopicBack" EntityType="Self.T_TopicBack" />
+    <EntitySet Name="T_Ver" EntityType="Self.T_Ver" />
+    <EntitySet Name="T_Vote" EntityType="Self.T_Vote" />
+    <EntitySet Name="T_LeaseRecord" EntityType="Self.T_LeaseRecord" />
+  </EntityContainer>
+</Schema>
