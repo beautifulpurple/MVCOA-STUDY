@@ -8,4 +8,3 @@ D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\MVCOADemoFirst\bin\Debug\E
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\MVCOADemoFirst\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\MVCOADemoFirst\obj\Debug\MVCOADemoFirst.exe
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\MVCOADemoFirst\obj\Debug\MVCOADemoFirst.pdb
-D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\MVCOADemoFirst\obj\Debug\MVCOADemoFirst.csprojResolveAssemblyReference.cache

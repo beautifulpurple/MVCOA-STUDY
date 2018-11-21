@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MFDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MFDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="MFDB.Customer" />
+    <EntitySet Name="OrderInfoes" EntityType="MFDB.OrderInfo" />
+    <EntitySet Name="Products" EntityType="MFDB.Product" />
+    <AssociationSet Name="CustomerProduct" Association="MFDB.CustomerProduct">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Roles" EntityType="MFDB.Role" />
+    <EntitySet Name="R_Customer_Role" EntityType="MFDB.R_Customer_Role" />
+    <AssociationSet Name="CustomerR_Customer_Role" Association="MFDB.CustomerR_Customer_Role">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="R_Customer_Role" EntitySet="R_Customer_Role" />
+    </AssociationSet>
+    <AssociationSet Name="RoleR_Customer_Role" Association="MFDB.RoleR_Customer_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="R_Customer_Role" EntitySet="R_Customer_Role" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(MFDB.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(MFDB.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <AssociationSet Name="CustomerOrderInfo" Association="MFDB.CustomerOrderInfo">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="OrderInfo" EntitySet="OrderInfoes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Documentation>
+      <Summary>消费者表</Summary>
+      <LongDescription>和订单表一对多关系</LongDescription>
+    </Documentation>
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false">
+      <Documentation>
+        <Summary>顾客姓名</Summary>
+        <LongDescription>没有详细</LongDescription>
+      </Documentation>
+    </Property>
+    <NavigationProperty Name="Products" Relationship="MFDB.CustomerProduct" FromRole="Customer" ToRole="Product" />
+    <NavigationProperty Name="R_Customer_Role" Relationship="MFDB.CustomerR_Customer_Role" FromRole="Customer" ToRole="R_Customer_Role" />
+    <NavigationProperty Name="OrderInfoes" Relationship="MFDB.CustomerOrderInfo" FromRole="Customer" ToRole="OrderInfo" />
+  </EntityType>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderContent" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Customer" Relationship="MFDB.CustomerOrderInfo" FromRole="OrderInfo" ToRole="Customer" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Customers" Relationship="MFDB.CustomerProduct" FromRole="Product" ToRole="Customer" />
+  </EntityType>
+  <Association Name="CustomerProduct">
+    <End Type="MFDB.Customer" Role="Customer" Multiplicity="*" />
+    <End Type="MFDB.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="R_Customer_Role" Relationship="MFDB.RoleR_Customer_Role" FromRole="Role" ToRole="R_Customer_Role" />
+  </EntityType>
+  <EntityType Name="R_Customer_Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Customer" Relationship="MFDB.CustomerR_Customer_Role" FromRole="R_Customer_Role" ToRole="Customer" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="MFDB.RoleR_Customer_Role" FromRole="R_Customer_Role" ToRole="Role" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="CustomerR_Customer_Role">
+    <End Type="MFDB.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="MFDB.R_Customer_Role" Role="R_Customer_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_Customer_Role">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoleR_Customer_Role">
+    <End Type="MFDB.Role" Role="Role" Multiplicity="1" />
+    <End Type="MFDB.R_Customer_Role" Role="R_Customer_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_Customer_Role">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <Association Name="CustomerOrderInfo">
+    <End Type="MFDB.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="MFDB.OrderInfo" Role="OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderInfo">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

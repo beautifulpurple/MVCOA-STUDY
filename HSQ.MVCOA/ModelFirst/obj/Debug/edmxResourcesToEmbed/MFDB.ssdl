@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MFDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CustomerProduct">
+    <Key>
+      <PropertyRef Name="Customers_Id" />
+      <PropertyRef Name="Products_Id" />
+    </Key>
+    <Property Name="Customers_Id" Type="int" Nullable="false" />
+    <Property Name="Products_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderInfoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_Customer_Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CustomerOrderInfo">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="OrderInfoes" Type="Self.OrderInfoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderInfoes">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerProduct_Customer">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="CustomerProduct" Type="Self.CustomerProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerProduct">
+        <PropertyRef Name="Customers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerProduct_Product">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="CustomerProduct" Type="Self.CustomerProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerProduct">
+        <PropertyRef Name="Products_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerR_Customer_Role">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="R_Customer_Role" Type="Self.R_Customer_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_Customer_Role">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleR_Customer_Role">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="R_Customer_Role" Type="Self.R_Customer_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_Customer_Role">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MFDBStoreContainer">
+    <EntitySet Name="CustomerProduct" EntityType="Self.CustomerProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderInfoes" EntityType="Self.OrderInfoes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="R_Customer_Role" EntityType="Self.R_Customer_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CustomerOrderInfo" Association="Self.FK_CustomerOrderInfo">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="OrderInfoes" EntitySet="OrderInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerProduct_Customer" Association="Self.FK_CustomerProduct_Customer">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CustomerProduct" EntitySet="CustomerProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerProduct_Product" Association="Self.FK_CustomerProduct_Product">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="CustomerProduct" EntitySet="CustomerProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerR_Customer_Role" Association="Self.FK_CustomerR_Customer_Role">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="R_Customer_Role" EntitySet="R_Customer_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleR_Customer_Role" Association="Self.FK_RoleR_Customer_Role">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="R_Customer_Role" EntitySet="R_Customer_Role" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.exe.config
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.exe
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.pdb
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.dll
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.xml
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.exe
+D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.pdb
