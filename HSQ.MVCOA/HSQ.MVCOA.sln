@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCOADemoFirst", "MVCOADemoFirst\MVCOADemoFirst.csproj", "{24C18234-1B51-4217-A426-0E17A8EAE1EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirst", "ModelFirst\ModelFirst.csproj", "{DB4B7748-B7AD-4C2D-803A-E79A45F3A29B}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{750143A1-4D67-4B35-8498-DC90970A3C26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneContext", "OneContext\OneContext.csproj", "{DDD493EC-C790-410A-9583-103910EB3A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCExtension", "MVCExtension\MVCExtension.csproj", "{E5F31C74-DDC5-4D09-8A75-F5A13E3A9BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcroute", "mvcroute\mvcroute.csproj", "{0299BEEF-9329-4581-9018-C8CC9688B09B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +33,23 @@ Global
 		{750143A1-4D67-4B35-8498-DC90970A3C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750143A1-4D67-4B35-8498-DC90970A3C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750143A1-4D67-4B35-8498-DC90970A3C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD493EC-C790-410A-9583-103910EB3A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD493EC-C790-410A-9583-103910EB3A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD493EC-C790-410A-9583-103910EB3A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD493EC-C790-410A-9583-103910EB3A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F31C74-DDC5-4D09-8A75-F5A13E3A9BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F31C74-DDC5-4D09-8A75-F5A13E3A9BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F31C74-DDC5-4D09-8A75-F5A13E3A9BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F31C74-DDC5-4D09-8A75-F5A13E3A9BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0299BEEF-9329-4581-9018-C8CC9688B09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0299BEEF-9329-4581-9018-C8CC9688B09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0299BEEF-9329-4581-9018-C8CC9688B09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0299BEEF-9329-4581-9018-C8CC9688B09B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51828E5A-1D5E-44C9-8F55-F26206FA6ED3}
 	EndGlobalSection
 EndGlobal

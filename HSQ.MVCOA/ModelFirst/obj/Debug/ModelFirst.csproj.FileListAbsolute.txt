@@ -8,3 +8,16 @@ D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\Entit
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.exe
 D:\视频教学\MVC\MVCOA-again\MVCOA-STUDY\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.pdb
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.exe.config
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.exe
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\ModelFirst.pdb
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.dll
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.xml
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.csprojAssemblyReference.cache
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.csproj.CoreCompileInputs.cache
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.csproj.CopyComplete
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.exe
+E:\IT精英\实践\自学程序各种笔记\MVCOAProject-again\StudyProject\HSQ.MVCOA\ModelFirst\obj\Debug\ModelFirst.pdb
